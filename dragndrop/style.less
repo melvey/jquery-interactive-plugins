@@ -1,0 +1,71 @@
+@correctGreen: #85C285; 
+@incorrectRed: #990000;
+@answerBackground: #f5f5f5;
+@iconPadding: 10px;
+
+.dragndrop-dropzone {
+	border-style: dotted;
+	border-width: 1px;
+	border-color: grey;
+	border-radius: 3px;
+	min-width: 50px;
+}
+.dragndrop-dropzone.dragndrop-correct {
+	color: @correctGreen;
+	border-color: @correctGreen;
+}
+.dragndrop-dropzone.dragndrop-correct:after {
+	font-family: FontAwesome;
+	padding-left: @iconPadding;
+	content: "\F00C";
+}
+.dragndrop-dropzone.dragndrop-incorrect {
+	color: @incorrectRed;
+	border-color: @incorrectRed;
+}
+.dragndrop-dropzone.dragndrop-incorrect:after {
+	font-family: FontAwesome;
+	padding-left: @iconPadding;
+	content: "\F00D";
+}
+.dragndrop-answer {
+	color: #269ccb;
+	border: 1px solid #ddd;
+	background-color: @answerBackground;
+	display: inline-block;
+	margin: 2px;
+	padding: 3px;
+	cursor: move;
+}
+.dragndrop-answer:after {
+	font-family: FontAwesome;
+	padding-left: 10px;
+	content: "\F047";
+}
+.dragndrop-dragging {
+	background-color: lighten(@answerBackground, 20%);
+}
+.dragndrop-hoverdrop {
+	background-color: #D4EBF5;
+}
+.dragndrop-answerblock .draggableAnswer {
+	margin: 10px;
+}
+.dragndrop-checkbtn {
+	background-color: @correctGreen;
+	border: 1px solid @correctGreen;
+	padding: 5px;
+	font-size: 1em;
+	font-weight: 200;
+	font-family: inherit;
+	border-radius: 3px;
+	color: #003359;
+	float: right;
+}
+.dragndrop-checkbtn:after {
+	font-family: FontAwesome;
+	padding-left: @iconPadding;
+	content: "\F046";
+	clear: both;
+}
+
